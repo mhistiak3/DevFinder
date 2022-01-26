@@ -1,0 +1,198 @@
+:root {
+  --bg-color: #141c2f;
+  --text-color: #eaecf0;
+  --box-color: #1f2a48;
+  --extra-color: #0079fe;
+}
+[data-theme="light"] {
+  --text-color: #141c2f;
+  --bg-color: #eaecf0;
+  --box-color: #cfd4e2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.mainLayout {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.box {
+  height: 100%;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box h3 {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 400;
+}
+/* Start Header */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header span b {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+/* End Header */
+
+/* Start searchBox */
+.searchBox {
+  width: 100%;
+  background-color: var(--box-color);
+  height: 55px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr;
+  border-radius: 10px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.searchBox input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  font-size: 18px;
+  color: var(--text-color);
+}
+.searchBox span {
+  font-size: 25px;
+  color: var(--extra-color);
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.searchBox button {
+  height: 100%;
+  background-color: var(--extra-color);
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+}
+/* End searchBox */
+
+/* Start User Box */
+.userBox {
+  width: 100%;
+  background-color: var(--box-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 20px 30px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.profile img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+.usernameOthers h2 {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+.usernameOthers h4 {
+  font-weight: 400;
+  color: var(--extra-color);
+  font-size: 17px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+.usernameOthers span {
+  font-weight: 300;
+  word-spacing: 2px;
+}
+.description {
+  font-size: 20px;
+  padding: 25px 0;
+  font-weight: 400;
+}
+.githubInfo {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.githubInfo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.githubInfo .number {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 5px;
+}
+.contactDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 18px;
+  padding-bottom: 5px;
+}
+.contactDetails a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.contactDetails a svg {
+  margin-right: 10px;
+}
+/* End User Box */
+
+@media (max-width: 650px) {
+  .box {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .contactDetails {
+    grid-template-columns: 1fr;
+  }
+}
