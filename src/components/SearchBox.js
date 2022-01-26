@@ -13,7 +13,7 @@ const SearchBox = ({ searchTerm, setSearchTerm, handleSubmit }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   );
 };

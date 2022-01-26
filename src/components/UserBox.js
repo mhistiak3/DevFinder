@@ -37,11 +37,15 @@ const UserBox = ({ user }) => {
               <MdLocationPin />
               {user.location ? user.location : "Not Available"}
             </a>
-            <a href="/">
+            <a
+              href={`https://twitter.com/${
+                user.twitter_username ? user.twitter_username : ""
+              }`}
+            >
               <FaTwitter />
               {user.twitter_username ? user.twitter_username : "Not Available"}
             </a>
-            <a href="/">
+            <a href={user.blog ? user.blog : "/"}>
               <MdOutlineCodeOff />
               {user.blog ? user.blog : "Not Available"}
             </a>

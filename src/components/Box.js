@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import SearchBox from "./SearchBox";
 import UserBox from "./UserBox";
 
@@ -36,7 +36,15 @@ const Box = () => {
       <div className="header">
         <h2>DevFinder</h2>
         <span onClick={() => setDarkTheme(!darkTheme)}>
-          <b>Light</b> <MdOutlineLightMode />
+          {darkTheme ? (
+            <>
+              <b>Light</b> <MdOutlineLightMode />
+            </>
+          ) : (
+            <>
+              <b>Dark</b> <MdOutlineDarkMode />
+            </>
+          )}
         </span>
       </div>
       <SearchBox
@@ -45,8 +53,10 @@ const Box = () => {
         handleSubmit={handleSubmit}
       />
 
-      {user ? (
+      {!loading && user ? (
         <UserBox user={user} />
+      ) : loading ? (
+        <h3>Loading...</h3>
       ) : (
         <h3>Search a Developer and Get Quick Info.</h3>
       )}
