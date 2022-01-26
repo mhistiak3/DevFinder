@@ -6,8 +6,8 @@
 }
 [data-theme="light"] {
   --text-color: #141c2f;
-  --bg-color: #f2f2f2;
-  --box-color: #cfd4e2;
+  --bg-color: #F5F8FF;
+  --box-color: #FEFEFE;
 }
 * {
   margin: 0;
