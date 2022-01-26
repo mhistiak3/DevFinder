@@ -23,7 +23,7 @@ body {
   height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
-  overflow: auto;
+ 
 }
 .box {
   height: 100%;
@@ -218,5 +218,8 @@ body {
   .userBox{
     padding: 10px 15px;
     
+  }
+  .mainLayout{
+    height:100%;
   }
 }
